@@ -5,7 +5,8 @@ import './App.css';
 // const { SubMenu } = Menu;
 // const { Content, Sider } = Layout;
 
-import Home from './home';
+import Home from './router';
+// import Home from './components/demo/router';
 
 class App extends Component {
   	render() {

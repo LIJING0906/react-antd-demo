@@ -16,12 +16,12 @@ export default class Home extends React.Component {
                     <Side/>
                 </Col>
                 <Col span={21}>
-                    <Row>
+                    {/* <Row>
                         <div style={{float: 'left'}}>left</div>
                         <div style={{float: 'right'}}>right</div>
-                    </Row>
+                    </Row> */}
                     <Row>
-                        主体部分
+                        {this.props.children}
                     </Row>
                 </Col>
             </Row>
