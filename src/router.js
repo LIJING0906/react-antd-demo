@@ -3,7 +3,7 @@ import { HashRouter, Route, Switch } from 'react-router-dom';
 import Home from './home';
 import Nomatch from './components/demo/nomatch';
 import Welcome from './components/welcome';
-import GoalNode from './components/pages/goalNode';
+import GoalNode from './components/pages/goalNode/goalNode';
 import ServerManage from './components/pages/serverManage';
 import Safety from './components/pages/safety';
 import Consumer from './components/pages/consumer';

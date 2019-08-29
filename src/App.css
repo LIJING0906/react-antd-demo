@@ -1,6 +1,7 @@
 @import '~antd/dist/antd.css';
 .App {
-  text-align: center;
+  text-align: left;
+  background: #f1f2f3;
 }
 .App .header .logo {
   width: 120px;
@@ -8,7 +9,4 @@
   background: rgba(255, 255, 255, 0.2);
   margin: 16px 28px 16px 0;
   float: left;
-}
-.App li{
-  text-align: left;
 }
