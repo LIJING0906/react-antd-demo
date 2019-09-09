@@ -1,11 +1,11 @@
 import React from 'react';
 import { Row } from 'antd';
 
-export default class serverManage extends React.Component {
+export default class Manage extends React.Component {
     render() {
         return (
             <Row>
-                this is serverManage page!!!!
+                this is addEditServer page!!!!
             </Row>
         )
     }

@@ -5,7 +5,8 @@ export default class AddEditNode extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            visible: false
+            visible: false,
+            data: {}
         };
     }
   
@@ -16,40 +17,33 @@ export default class AddEditNode extends React.Component {
     };
   
     handleOk = e => {
-        console.log(e);
-        this.setState({
-            visible: false,
-        });
+        this.props.refreshParent();
     };
   
     handleCancel = e => {
-        console.log(e);
-        this.setState({
-            visible: false,
-        });
+        this.props.refreshParent();
     };
     
     componentDidMount() {
-        console.log(this.props);
         this.setState({
-            visible: this.props.visible
+            visible: this.props.visible.visible,
+            data: this.props.visible.data
         });
     };
 
     render() {
         return (
             <div>
-                {/* <Button type="primary" onClick={this.showModal}>
-                    Open Modal
-                </Button> */}
                 <Modal
-                title="Basic Modal"
+                title={this.state.data.name?"编辑目标节点":"添加目标节点"}
                 visible={this.state.visible}
                 onOk={this.handleOk}
                 onCancel={this.handleCancel}>
-                    <p>Some contents</p>
-                    <p>Some contents...</p>
-                    <p>Some contents...</p>
+                    {
+                        Object.keys(this.state.data).map((key, index) => {
+                            return <p key={index}>{key}：{this.state.data[key]}</p>
+                        })
+                    }
                 </Modal>
             </div>
         );
